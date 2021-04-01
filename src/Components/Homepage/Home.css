@@ -1,0 +1,14 @@
+.mainhomepage{
+    height: 80vh;
+    
+}
+
+.leaguepop{
+    display: inline-block;
+    margin: 10px;
+}
+
+.leaguepop img{
+    width: 150px;
+    height: 150px;
+}

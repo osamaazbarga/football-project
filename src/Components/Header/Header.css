@@ -1,0 +1,39 @@
+
+
+header {
+    font-family:'Roboto', sans-serif;
+    /* background: red; */
+    height: 9rem;
+    width: 100vw;
+    display: flex;
+    font-size: large;
+    font-weight: 500;
+
+}
+
+.logo {
+    width: 10vw;
+}
+.logo img{
+    height: 9rem;
+    
+
+}
+.navbar {
+    width: 90vw;
+    background: #d9d9d9;
+    margin-top: 65px;
+    margin-bottom: 40px;
+}
+.links {
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 6px;
+}
+
+.item{
+    color: #3c6e71;
+    text-decoration: none;
+}
+
