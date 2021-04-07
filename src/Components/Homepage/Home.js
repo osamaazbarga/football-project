@@ -66,17 +66,19 @@ const Home =()=>{
     const getpopCountry=()=>{
         let arr=[]
         console.log(apileage);
+        if(apileage.data!=null){
+            for (let i = 0; i < popularCountry.length; i++) {
+                for (let j = 0; j < apileage.data.response.length; j++) {
+                    if(popularCountry[i]===apileage.data.response[j].league.id){
+                        arr.push(apileage.data.response[j]);
+                        break
     
-        for (let i = 0; i < popularCountry.length; i++) {
-            for (let j = 0; j < apileage.data.response.length; j++) {
-                if(popularCountry[i]===apileage.data.response[j].league.id){
-                    arr.push(apileage.data.response[j]);
-                    break
-
+                    }
+                    
                 }
                 
             }
-            
+
         }
         setPopCountry(arr);
     }
@@ -94,7 +96,7 @@ const Home =()=>{
 
                             
 
-                            <div className="leaguepop">
+                            <div key={pop.league.id} className="leaguepop">
                         
                                 <Link to={`/showteam/${pop.league.id}`}><img src={pop.league.logo} alt="popleage"/></Link>
 
