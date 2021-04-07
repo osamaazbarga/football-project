@@ -1,0 +1,99 @@
+.container .byseason{
+    display:flex;
+    justify-content: space-between;
+    width: 40vw;
+    align-items: center;
+    margin: 10px auto;
+
+    background: #d9d9d9;
+    font-size: 20px;
+    
+}
+
+.info .cards{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30vw;
+    margin: 10px auto;
+    
+}
+
+.red i{
+    color: red;
+    background: red;
+    height: 20px;
+
+}
+
+.yellowred i.y{
+    color: yellow;
+    background: yellow;
+    height: 20px;
+}
+
+.yellowred i.r{
+    color: red;
+    background: red;
+    height: 20px;
+}
+
+.yellow i{
+    color: yellow;
+    background: yellow;
+    height: 20px;
+}
+
+.statistics{
+    display:flex;
+    justify-content: space-between;
+    width: 30vw;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.title {
+    font-weight: 600;
+    background: #353535;
+    color: white;
+    width: 30vw;
+    margin: 0 auto;
+}
+
+.gamesinfo,.goalsinfo,.passesinfo,.penaltyinfo {
+    display:flex;
+    justify-content: space-between;
+    width: 30vw;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.secondtitle{
+    padding: 10px;
+    background:#353535;
+    color: white;
+}
+
+.lineinfo{
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    align-items: center;
+    margin: 10px auto;
+}
+
+span{
+    font-weight: 600;
+}
+
+td{
+    padding: 10px;
+}
+table{
+    margin: 0 auto;
+}
+
+td{
+    background: #d9d9d9;
+}
+

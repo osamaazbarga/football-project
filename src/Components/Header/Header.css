@@ -24,6 +24,8 @@ header {
     background: #d9d9d9;
     margin-top: 65px;
     margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
 }
 .links {
     width: 30vw;
@@ -37,3 +39,8 @@ header {
     text-decoration: none;
 }
 
+.Searchinput{
+    padding: 5px;
+    margin-top: 3px;
+
+}

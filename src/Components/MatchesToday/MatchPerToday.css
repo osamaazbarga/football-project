@@ -1,0 +1,21 @@
+.matchline{
+    margin: 0 auto;
+    width:70%;
+
+}
+.mathchtoday{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 1px;
+    
+}
+
+.hometeam ,.awayteam{
+    width: 200px;
+
+}
+.score{
+    width: 100px;
+}
