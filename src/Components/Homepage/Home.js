@@ -13,7 +13,6 @@ import Api from '../Api/Api'
 import './Home.css'
 import News from '../News/News'
 import MatchesPerToday from '../MatchesToday/MatchesPerToday'
-import ApiSeasson from '../Api/ApiSeasson'
 import Showsquad from '../ShowSquad/ShowSquad'
 import Showplayer from '../Showplayer/Showplayer'
 import Search from '../Teams/Search'
@@ -33,7 +32,6 @@ const Home =()=>{
         getApi();
         getpopCountry();
         //leaguelist();
-        getsesson();
         
 
     },[])
@@ -50,15 +48,7 @@ const Home =()=>{
 
     }
 
-    const getsesson=async()=>{
-            try{
-                let data  =await ApiSeasson.get('');
-                console.log(data)
-            }catch(err){
-                console.log(err)
-            }
-            
-    }
+   
 
 
     
@@ -109,7 +99,7 @@ const Home =()=>{
                 }
 
                 {
-                    <MatchesPerToday/>
+                    // <MatchesPerToday/>
                 }
                 </div>
         )
