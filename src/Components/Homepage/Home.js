@@ -36,6 +36,8 @@ const Home =()=>{
 
     },[])
 
+    
+
 
     
     const getApi=async()=>{

@@ -6,9 +6,17 @@ import './News.css'
 const News =()=>{
 
     const [getnews,setGetnews]=useState([])
+    const [getnewss,setGetnewss]=useState([])
+
     useEffect(()=>{
-        getnewapi();
-    },[])
+        const timerId=setTimeout(() => {
+            getnewapi();
+            setGetnewss(getnews)
+        }, 1000);
+        return()=>{
+            clearTimeout(timerId)
+        };
+    },[getnews])
     const getnewapi=async()=>{
         try{
             let data =await Apinews.get('');
@@ -19,7 +27,7 @@ const News =()=>{
         }
     }
     const Rendernews=()=>{
-        return getnews.map((ne,i)=>{
+        return getnewss.map((ne,i)=>{
             let rr=i<2?(<div key={i} className="mainnews">
             <a href={ne.url}><img src={ne.urlToImage} alt='main'/>
             <div className="contentmain">
