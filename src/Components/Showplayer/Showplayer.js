@@ -10,6 +10,7 @@ import './Showplayer.css'
 const Showplayer =()=>{
     let {id_player}=useParams();
     const [player,setPlayer]=useState([]);
+    const [playerinfo,setPlayerinfo]=useState([]);
     const [trophies,setTrophies]=useState([]);
 
 
@@ -28,6 +29,8 @@ const Showplayer =()=>{
         try{
             let data =await Api.get(`/v2/players/player/${id_player}`);
             let trophdata =await Api.get(`/v2/trophies/player/${id_player}`);
+            let playerdata =await Api.get(`/v3/players?id=${id_player}&season=2020`);
+
 
             arr=data.data.api.players;
             for (let i = 0; i < arr.length; i++) {
@@ -46,8 +49,9 @@ const Showplayer =()=>{
             }
 
             setPlayer(newarr);
+            setPlayerinfo(playerdata.data.response[0].player)
             setTrophies(trophdata.data.api.trophies)
-            console.log(trophdata.data.api.trophies);
+
         }catch(err){
             console.log(err)
         }
@@ -56,15 +60,6 @@ const Showplayer =()=>{
 
 
     const Rendertrophies=()=>{
-        // let trophiescounter=[];
-        // for (let i = 0; i < trophies.length; i++) {
-        //     for (let j = 0; j < trophiescounter.length; j++) {
-        //         if(trophies[i].league===trophiescounter[j].league)
-                
-        //     }
-            
-        // }
-
         return (
             <table>
                 <tr>
@@ -74,17 +69,6 @@ const Showplayer =()=>{
                     <th>place</th>
 
                 </tr>
-                {/* <tr>
-                    <td>Jill</td>
-                    <td>Smith</td>
-                    <td>50</td>
-                </tr>
-                <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
-                </tr> */}
-
                 {
                     trophies.map(troph=>{
                         return(
@@ -112,6 +96,7 @@ const Showplayer =()=>{
             return(
                 <div className="playerinfo">
                     <h1>{player[0].player_name}</h1>
+                    <div><img src={playerinfo.photo} alt="playerimg"/></div>
                     <div className="names">
                         <div className="lineinfo"><span>first name:</span> {player[0].firstname}</div>
                         <div className="lineinfo"><span>last name:</span> {player[0].lastname}</div>

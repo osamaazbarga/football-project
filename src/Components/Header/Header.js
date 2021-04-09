@@ -16,7 +16,7 @@ const Header =()=>{
                 <div className="links">
                 <Link to="/" className="item">Home</Link>
                 <Link to="/search" className="item">Search</Link>
-                {/* <Link to="/h2h" className="item">Head To Head</Link> */}
+                <Link to="/h2h" className="item">Head To Head</Link>
                 
                 </div>
                

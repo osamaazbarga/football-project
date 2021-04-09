@@ -1,0 +1,36 @@
+img{
+    width:100px;
+    display: block;
+    margin: 0 auto;
+}
+.bigcontainer{
+    display: inline-block;
+}
+
+.countrycontainer{
+    /* /* display: inline-flex;
+    flex-flow: column wrap; */
+    /*display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  grid-auto-rows: minmax(100px, auto); */
+
+    
+    width:200px;
+
+
+}
+
+.country{
+    /* flex-direction:row;
+    order: 5; */
+    text-align: center;
+
+}
+span{
+    text-align: center;
+}
+
+.dropdowncountry{
+    width: 200px;
+}

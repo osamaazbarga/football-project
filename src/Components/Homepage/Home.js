@@ -16,6 +16,7 @@ import MatchesPerToday from '../MatchesToday/MatchesPerToday'
 import Showsquad from '../ShowSquad/ShowSquad'
 import Showplayer from '../Showplayer/Showplayer'
 import Search from '../Teams/Search'
+import H2hteam from '../H2h/H2hteam'
 
 
 
@@ -24,16 +25,19 @@ const popularCountry=[39,61,140,78,135]
 const Home =()=>{
     
     const [apileage,setApileage]=useState([]);
+    const [apileageapp,setApileageapp]=useState([]);
+
     const [popCountry,setPopCountry]=useState([]);
-    // const [byteam,setByteam]=useState([]);
-
-
     useEffect(()=>{
-        getApi();
-        getpopCountry();
-        //leaguelist();
-        
-
+        // const timerId=setTimeout(() => {
+            getApi();
+            setApileageapp(apileage);
+            getpopCountry();
+            
+        // }, 5000);
+        // return()=>{
+        //     clearTimeout(timerId)
+        // };      
     },[])
 
     
@@ -114,6 +118,8 @@ const Home =()=>{
                 <Route path="/" exact component={homepage}/>
                 <Route path="/search" component={Search}/>
                 <Route path="/h2h" component={H2h}/>
+                {/* <Route path="/h2h/" component={H2hteam}/> */}
+
                 <Route path="/showteam/:id" component={Showteams}/>
                 <Route path="/showsquad/:id_squad" component={Showsquad}/>
                 <Route path="/showplayer/:id_player" component={Showplayer}/>

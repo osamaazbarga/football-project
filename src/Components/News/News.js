@@ -12,7 +12,7 @@ const News =()=>{
         const timerId=setTimeout(() => {
             getnewapi();
             setGetnewss(getnews)
-        }, 1000);
+        }, 2000);
         return()=>{
             clearTimeout(timerId)
         };
